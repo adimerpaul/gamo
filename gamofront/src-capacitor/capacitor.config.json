@@ -1,0 +1,7 @@
+{
+  "appId": "org.gamo.quasar.org",
+  "appName": "Gamo",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
