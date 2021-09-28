@@ -169,11 +169,12 @@ export default {
         })
         .catch(err => {
           this.table=false;
+          this.$q.loading.hide()
           this.submitting = false;
           this.$q.notify({
             color: 'negative',
             position: 'top',
-            message: 'Su conexion a internet es inestable',
+            message: err.response.data.message,
             icon: 'report_problem'
           })
         })
