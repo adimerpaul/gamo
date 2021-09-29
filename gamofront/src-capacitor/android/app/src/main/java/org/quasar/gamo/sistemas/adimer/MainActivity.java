@@ -1,4 +1,4 @@
-package org.gamo.quasar.org;
+package org.quasar.gamo.sistemas.adimer;
 
 import android.os.Bundle;
 

@@ -2,7 +2,7 @@
   <q-page class="text-center bg-blue-grey-1">
     <div class="row">
       <div class="col-12 q-mt-sm q-px-md">
-        <h3 class="text-h6 text-weight-bolder">CONSULTA</h3>
+        <h3 class="text-h6 text-weight-bolder">CONSULTA DE TASAS POR SERVICIO</h3>
         <!--        <div class="q-pa-md" >-->
         <!--          <q-input-->
         <!--            ref="input"-->

@@ -1,5 +1,5 @@
 {
-  "appId": "org.gamo.quasar.org",
+  "appId": "org.quasar.gamo.sistemas.adimer",
   "appName": "Gamo",
   "bundledWebRuntime": false,
   "npmClient": "npm",
