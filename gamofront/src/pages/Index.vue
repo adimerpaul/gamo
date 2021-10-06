@@ -8,14 +8,14 @@
           style="width: 120px"
         >
       </div>
-      <div class="col-12">
+      <div class="col-12 q-mt-sm">
         <q-btn color="red-10" to="/tasas" icon="code" icon-right="send" label="Deudas tasas por servicio" />
       </div>
-      <div class="col-12">
-        <q-btn color="green-10" @click="vehiculo"  icon-right="send" label="Ir a consultar Deudas Ruat Vehiculos" />
+      <div class="col-12 q-mt-sm">
+        <q-btn color="green-10" @click="vehiculo" icon="drive_eta" icon-right="send" label="Consultar Deudas Vehiculos" />
       </div>
-      <div class="col-12">
-        <q-btn color="green-10" @click="inmueble"  icon-right="send" label=" Ir a consultar Deudas Ruat Inmuebles" />
+      <div class="col-12 q-mt-sm">
+        <q-btn color="accent" @click="inmueble" icon="maps_home_work" icon-right="send" label="Consultar Deudas Inmuebles" />
       </div>
     </div>
 
