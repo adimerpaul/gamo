@@ -9,13 +9,13 @@
         >
       </div>
       <div class="col-12 q-mt-sm">
-        <q-btn color="red-10" to="/tasas" icon="code" icon-right="send" label="Deudas tasas por servicio" />
+        <q-btn color="red-9" style="width: 350px" to="/tasas" icon="code" icon-right="send" label="Deudas tasas por servicio" />
       </div>
       <div class="col-12 q-mt-sm">
-        <q-btn color="green-10" @click="vehiculo" icon="drive_eta" icon-right="send" label="Consultar Deudas Vehiculos" />
+        <q-btn color="red-9" style="width: 350px" @click="vehiculo" icon="drive_eta" icon-right="send" label="Consultar Deudas Vehiculos" />
       </div>
       <div class="col-12 q-mt-sm">
-        <q-btn color="accent" @click="inmueble" icon="maps_home_work" icon-right="send" label="Consultar Deudas Inmuebles" />
+        <q-btn color="red-9" style="width: 350px" @click="inmueble" icon="maps_home_work" icon-right="send" label="Consultar Deudas Inmuebles" />
       </div>
     </div>
 
@@ -43,6 +43,6 @@ export default {
      }
    }
 
- 
+
 }
 </script>
