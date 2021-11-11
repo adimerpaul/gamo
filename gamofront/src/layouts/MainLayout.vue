@@ -43,6 +43,7 @@
               <q-item-label caption>Menu de consulta</q-item-label>
             </q-item-section>
           </q-item>
+
           <q-item to="/tasas" exact clickable v-ripple>
             <q-item-section avatar>
               <q-icon name="code" />
@@ -50,6 +51,25 @@
             <q-item-section>
               <q-item-label> Tasa</q-item-label>
               <q-item-label caption>Consulta de tasas y servicios</q-item-label>
+            </q-item-section>
+          </q-item>
+                    <q-item to="/mercado" exact clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="storefront" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label> Mercados</q-item-label>
+              <q-item-label caption>Consulta de mercados </q-item-label>
+            </q-item-section>
+          </q-item>
+          
+          <q-item to="/actividad" exact clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="store" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label> Actividad Ec</q-item-label>
+              <q-item-label caption>Consulta de Actividad Economica</q-item-label>
             </q-item-section>
           </q-item>
           <!--          <q-item to="/" exact clickable v-ripple>-->

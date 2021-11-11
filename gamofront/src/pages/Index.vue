@@ -17,6 +17,12 @@
       <div class="col-12 q-mt-sm">
         <q-btn color="red-9" style="width: 350px" @click="inmueble" icon="maps_home_work" icon-right="send" label="Consultar Deudas Inmuebles" />
       </div>
+      <div class="col-12 q-mt-sm">
+        <q-btn color="red-9" style="width: 350px" to="/mercado" icon="storefront" icon-right="send" label="Consultar Deudas Mercados" />
+      </div>
+      <div class="col-12 q-mt-sm">
+        <q-btn color="red-9" style="width: 350px" to="/actividad" icon="store" icon-right="send" label="Consultar Deudas Actividad Ec." />
+      </div>
     </div>
 
 

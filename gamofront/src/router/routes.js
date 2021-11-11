@@ -1,5 +1,7 @@
 import Index from 'pages/Index'
 import Tasas from "pages/Tasas";
+import Mercado from "pages/Mercado";
+import Actividad from "pages/Actividad";
 const routes = [
   {
     path: '/',
@@ -7,6 +9,8 @@ const routes = [
     children: [
       { path: '', component: Index},
       { path: 'tasas', component: Tasas},
+      { path: 'mercado', component: Mercado},
+      { path: 'actividad', component: Actividad},
     ]
   },
 
