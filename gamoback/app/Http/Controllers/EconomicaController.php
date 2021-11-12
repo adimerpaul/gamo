@@ -36,6 +36,7 @@ class EconomicaController extends Controller
     public function store(Request $request)
     {
         //
+        return DB::SELECT('SELECT npadron as padron,nactdescri as descrip,ndiract as direccion,gest,"N" as tip from natur where npadron = "'.$request->padron.'" union Select jpadron as padron,j.actdescri as descrip,jdiractiv as direccion,gest, "J" as tip from jurid where jpadron="'.$request->padron.'"');
     }
 
     /**

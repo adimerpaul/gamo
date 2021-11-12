@@ -40,24 +40,24 @@
         >
           <template v-slot:body="props">
             <q-tr :props="props">
-              <q-td key="numinmueble" :props="props">
-                {{ props.row.numinmueble }}
+              <q-td key="padron" :props="props">
+                {{ props.row.padron }}
               </q-td>
-              <q-td key="direccion" :props="props">
-                {{ props.row.direccion }}
+              <q-td key="Ubicacion" :props="props">
+                {{ props.row.ubicacion }}
               </q-td>
               <q-td key="gestion" :props="props">
 <!--                {{ props.row.gestion }}-{{anio}}-->
-                <q-badge :color="props.row.gestion==anio?'positive':'negative'" :label="props.row.gestion"/>
+                <q-badge :color="props.row.gest==anio?'positive':'negative'" :label="props.row.gest"/>
               </q-td>
               <q-td key="estado" :props="props">
-                <q-badge :color="props.row.gestion==anio?'positive':'negative'" :label="props.row.gestion==anio?'No tiene deudas':'El inmueble tiene deudas dudas y consultas 69603027'"/>
+                <q-badge :color="props.row.gest==anio?'positive':'negative'" :label="props.row.gest==anio?'No tiene deudas':'El inmueble tiene deudas dudas y consultas 69603027'"/>
               </q-td>
             </q-tr>
           </template>
         </q-table>
         <q-banner v-if="banner" class="bg-primary text-white">
-          No tiene Inmuebles registrados a ese carnet
+          No tiene Puesto registrados con ese padron
           dudas y consultas 69603027
         </q-banner>
       </div>
@@ -84,11 +84,11 @@ export default {
       test: '',
       submitting: false,
       columns: [
-        {name: 'numinmueble', required: true, label: 'Numero de inmueble', align: 'left', field: row => row.numinmueble, // format: val => `${val}`,sortable: true
+        {name: 'padron', required: true, label: 'Numero de Padron', align: 'left', field: row => row.padron, // format: val => `${val}`,sortable: true
         },
-        {name: 'direccion', required: true, label: 'Direccion', align: 'center', field: row => row.direccion, // format: val => `${val}`,sortable: true
+        {name: 'ubicacion', required: true, label: 'Ubicacion', align: 'center', field: row => row.ubicacion, // format: val => `${val}`,sortable: true
         },
-        {name: 'gestion', required: true, label: 'Gestion', align: 'right', field: row => row.gestion, // format: val => `${val}`,sortable: true
+        {name: 'gestion', required: true, label: 'Gestion', align: 'right', field: row => row.gest, // format: val => `${val}`,sortable: true
         },
         {name: 'estado', required: true, label: 'Estado', align: 'right', field: row => row.estado, // format: val => `${val}`,sortable: true
         },
@@ -123,11 +123,13 @@ export default {
       //   this.table=true;
       // }, 3000)
       this.data=[];
-      this.$q.loading.show()
+      //this.$q.loading.show()
       // this.$q.loading.hide()
       // console.log(process.env.API+'/inmueble')
       // return false;
-      this.$axios.post(process.env.API+'/inmueble',{comun:this.numinmueble}).then((res) => {
+      this.$axios.post(process.env.API+'/mercado',{padron:this.padron}).then((res) => {
+          //console.log(res.data)
+          //return false
           // console.log(res.data)
         this.$q.loading.hide()
           // this.data = response.data
@@ -138,9 +140,9 @@ export default {
               // r.forEach(r=>{
                 // console.log(r);
                 this.data.push({
-                  numinmueble: r.cantidad,
-                  direccion: r.descrip,
-                  gestion: r.gestion,
+                  padron: r.padron,
+                  ubicacion: r.ubicacion,
+                  gest: r.gest,
                   estado: '',
                 })
               })
@@ -173,7 +175,7 @@ export default {
       // this.data.forEach(e => {
       //   sum += parseFloat(e.monto);
       // });
-      return 'Inmuebles registrados '+ this.data.length
+      return 'Mercado registrados '+ this.data.length
     }
   }
 }

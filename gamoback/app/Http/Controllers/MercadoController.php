@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mercado;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MercadoController extends Controller
 {
@@ -37,10 +38,9 @@ class MercadoController extends Controller
     public function store(Request $request)
     {
         //
-        if(DB::select('SELECT * from eventual where padron='+str_replace('-','',$request->padron))->exists())
-            return DB::select('SELECT * from eventual where padron='+str_replace('-','',$request->padron));
-        else
-            return DB::select('SELECT * from formales where padron='+str_replace('-','',$request->padron));
+        $pad=str_replace(['-',' '],'',$request->padron);
+        //return 'SELECT padron,ubicacion,gest,"E" as tipo from eventual where trim(padron)="'.$pad.'" union SELECT padron,domicilio as ubicacion,gest,"F" as tipo from formales where trim(padron)="'.$pad.'"';
+        return DB::select('SELECT padron,ubicacion,gest,"E" as tipo from eventual where trim(padron)="'.$pad.'" union SELECT padron,domicilio as ubicacion,gest,"F" as tipo from formales where trim(padron)="'.$pad.'"');
     }
 
     /**
