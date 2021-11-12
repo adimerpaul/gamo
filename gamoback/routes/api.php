@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 Route::resource('/inmueble',\App\Http\Controllers\InmuebleController::class);
+Route::resource('/mercado',\App\Http\Controllers\MercadoController::class);
+Route::resource('/economica',\App\Http\Controllers\EconomicaController::class);
